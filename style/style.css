@@ -1,0 +1,130 @@
+:root {
+  --color-bg: #f0eef6;
+  --color-white: #fff;
+  --color-pink: #b1335f;
+  --color-secondary: #d4396f;
+  --color-gray: #98a4b3;
+  --color-dark: #1a273b;
+  --color-black: #151b27;
+  --color-light: #cccfe0;
+  --card-border-radius: 1rem;
+  --btn-padding: 0.5rem 2rem;
+  --card-padding: 1rem;
+
+  --transition: all 0.3s ease-in-out;
+  --box-shadow: 0 2rem 3rem var(--color-light);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  outline: 0;
+}
+body {
+  max-width: 100vw;
+  height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-light);
+  overflow-x: hidden;
+}
+a {
+  display: block;
+
+  transition: var(--transition);
+}
+img {
+  display: block;
+  width: 100%;
+}
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.btn {
+  padding: var(--btn-padding);
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-transform: uppercase;
+}
+
+.btn-pink {
+  color: var(--color-pink);
+  border: 2px solid var(--color-pink);
+}
+.btn-pink:hover {
+  color: var(--color-white);
+  background-color: var(--color-pink);
+}
+/*=======NAV starts======*/
+nav {
+  display: grid;
+  place-items: center;
+  background-color: var(--color-dark);
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100vw;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand h2 {
+  font-size: 1.53rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-weight: bold;
+  position: relative;
+}
+
+.brand span {
+  color: var(--color-pink);
+}
+.brand h5 {
+  font-size: 1rem;
+  font-weight: 100;
+  color: var(--color-light);
+}
+.nav-items {
+  display: flex;
+  gap: 1rem;
+  text-transform: uppercase;
+}
+.nav-items li a {
+  color: #fff;
+  font-weight: 500;
+}
+.nav-items li a:hover {
+  color: var(--color-pink);
+}
+.nav-items .active {
+  color: var(--color-secondary);
+}
+.sale-ribbon {
+  margin-top: 4.9rem;
+  background-color: var(--color-secondary);
+  width: 100%;
+  height: 2rem;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+.sale-ribbon p {
+  font-size: 1rem;
+  color: var(--color-black);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.sale-ribbon p span {
+  color: var(--color-white);
+  font-size: 0.8rem;
+}
