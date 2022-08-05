@@ -187,6 +187,7 @@ header {
   margin-bottom: 3rem;
   line-height: 1.8;
 }
+
 .subcription {
   background-color: var(--color-pink);
   display: flex;
@@ -213,7 +214,7 @@ header {
 }
 
 .collect-container {
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 .collect-container h2 {
   font-size: 2.5rem;
@@ -239,7 +240,7 @@ header {
   grid-template-columns: repeat(12, 1fr);
   position: relative;
   margin-top: 10rem;
-  width: 90rem;
+  width: 85rem;
 }
 .image-bottom {
   grid-column: 1/8;
@@ -294,26 +295,25 @@ header {
   font-size: 2.5rem;
 }
 .items-container .items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
 }
 
 .item {
   background-color: var(--color-white);
   padding: 0.5rem;
-  width: 14rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 16rem;
+
+  display: grid;
+  place-items: center;
   border-radius: var(--card-border-radius);
   text-align: center;
   box-shadow: var(--box-shadow);
   margin-top: 4rem;
 }
 .item .image-container {
-  width: 13rem;
+  width: 15rem;
   border-radius: 0.5rem 0.5rem 0 0;
   overflow: hidden;
 }
@@ -335,11 +335,11 @@ header {
   grid-template-columns: repeat(12, 1fr);
   position: relative;
   margin-top: 10rem;
-  width: 85rem;
+  width: 84rem;
 }
 .contact-image-top {
   grid-column: 1/9;
-  width: 50rem;
+  width: 48rem;
   grid-row: 1;
   z-index: 1;
 }
@@ -351,7 +351,7 @@ header {
 .contact-image-bottom {
   grid-column: 7/12;
   grid-row: 1;
-  width: 45rem;
+  width: 43.4rem;
   height: 48rem;
   padding-top: 5rem;
   position: absolute;
@@ -446,4 +446,70 @@ footer {
 }
 .icons i:hover {
   color: var(--color-pink);
+}
+/*================ MQ  large device========== */
+
+@media screen and (min-width: 1900px) {
+  .container {
+    width: 88%;
+  }
+  .hero-container {
+    margin-top: 10rem;
+  }
+  .collect-container {
+    margin-top: 10rem;
+  }
+
+  /*==========about container==== */
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    margin-top: 10rem;
+    width: 85rem;
+  }
+  .image-bottom {
+    grid-column: 1/8;
+    grid-row: 1;
+    width: 67rem;
+    height: 57rem;
+    padding-top: 6rem;
+  }
+
+  .image-top {
+    grid-column: 7/12;
+    width: 62.5rem;
+    grid-row: 1;
+    z-index: 1;
+    height: 34rem;
+  }
+
+  /*==========contact container*/
+  .contact-container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    position: relative;
+    margin-top: 10rem;
+    width: 84rem;
+  }
+  .contact-image-top {
+    grid-column: 1/8;
+    width: 73rem;
+    grid-row: 1;
+    z-index: 1;
+  }
+
+  .contact-image-top img {
+    border-radius: 0rem 1rem 1rem 0rem;
+    height: 35rem;
+  }
+
+  .contact-image-bottom {
+    grid-column: 7/12;
+    grid-row: 1;
+    width: 57.5rem;
+    height: 50rem;
+    padding-top: 8rem;
+    overflow: hidden;
+  }
 }
